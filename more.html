@@ -17,7 +17,7 @@
             margin-bottom: 20px;
         }
 
-        a {
+        a, button {
             text-decoration: none;
             color: white;
             background-color: #007BFF;
@@ -25,13 +25,44 @@
             border-radius: 5px;
             display: inline-block;
             margin-top: 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
         }
 
-        a:hover {
+        a:hover, button:hover {
             background-color: #0056b3;
+        }
+
+        .instagram-share {
+            background-color: #E1306C;
+        }
+
+        .instagram-share:hover {
+            background-color: #C2285B;
         }
     </style>
 </head>
 <body>
     <h1>More Information</h1>
-    <p>Welcome to the 'Read More' page! Here you can add detailed information about you
+    <p>Welcome to the 'Read More' page! Here you can add detailed information about your project, instructions, or any additional content.</p>
+    
+    <!-- Go back button -->
+    <a href="index.html" target="_self">Go Back</a>
+    
+    <!-- Visit Google button -->
+    <a href="https://www.google.com" target="_blank">Visit Google</a>
+
+    <!-- Instagram share button -->
+    <button class="instagram-share" onclick="shareOnInstagram()">Share on Instagram</button>
+
+    <script>
+        function shareOnInstagram() {
+            const url = "https://www.instagram.com/";
+            const shareText = "Check out this awesome page!";
+            const shareLink = `${url}?text=${encodeURIComponent(shareText)}`;
+            window.open(shareLink, "_blank");
+        }
+    </script>
+</body>
+</html>
