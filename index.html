@@ -28,12 +28,29 @@
             color: #333;
         }
 
-        a {
+        a, button {
             text-decoration: none;
-            color: #007BFF;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
         }
 
-        a:hover {
+        a:hover, button:hover {
+            background-color: #0056b3;
+        }
+
+        a.plain-link {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a.plain-link:hover {
             text-decoration: underline;
         }
     </style>
@@ -47,12 +64,11 @@
 
     <h2>FranceShopOumTest 2025: Main Page</h2>
     <h1>Welcome to My Web Page</h1>
-    <p>This is a website testing page to run a GA4 test tutorial.</p>
-
-    <a href="more.html" target="_self">Read More</a>
-
-    <p>Visit Google here: 
-        <a href="https://www.google.com" target="_blank">Visit Google</a>
+    <p>
+        This is a website testing page to run a GA4 test tutorial. 
+        <a href="https://www.google.com" target="_blank" class="plain-link">Visit Google</a>
     </p>
+
+    <button onclick="window.location.href='more.html';">Read More</button>
 </body>
 </html>
