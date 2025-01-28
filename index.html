@@ -5,75 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FranceShopOumTest 2025: Main Page</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-        h1, h2 { color: #333; }
-        a, button { text-decoration: none; color: white; background-color: #007BFF; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-top: 10px; border: none; cursor: pointer; }
-        a:hover, button:hover { background-color: #0056b3; }
-        a.plain-link { color: #007BFF; text-decoration: none; background-color: transparent; padding: 0; }
-        a.plain-link:hover { text-decoration: underline; }
-        .form-group { margin-top: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a, button {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+        a:hover, button:hover {
+            background-color: #0056b3;
+        }
+        .plain-link {
+            color: #007BFF;
+            background: none;
+            text-decoration: underline;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            margin-right: 10px;
+        }
     </style>
     <!-- Google Tag Manager -->
-    <script>(function(w, d, s, l, i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j, f);})(window,document,'script','dataLayer','GTM-WXRMT5TT');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'GTM-WXRMT5TT');
+    </script>
     <!-- End Google Tag Manager -->
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXRMT5TT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXRMT5TT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <h2>FranceShopOumTest 2025: Main Page</h2>
     <h1>Welcome to My Web Page</h1>
-    <p>This is a website testing page to run a GA4 test tutorial. <a href="https://www.google.com" target="_blank" class="plain-link">Visit Google</a></p>
+    <p>This is a website testing page to run a GA4 test tutorial. 
+        <a href="https://www.google.com" class="plain-link" target="_blank">Visit Google</a>
+    </p>
 
     <!-- Read More Button -->
-    <a href="more.html" class="button">Read More</a>
+    <a href="more.html" id="read_more_button">Read More</a>
 
     <!-- Newsletter Signup Form -->
     <h3>Signup for our Newsletter</h3>
     <form id="newsletter-form" action="thank-you.html">
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
-            <small id="emailHelp">This form does not save your email. It is for demo purposes.</small>
-        </div>
-        <button type="submit" class="btn btn-primary">Subscribe</button>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+        <button type="submit" id="subscribe_button">Subscribe</button>
     </form>
-</body>
-</html>
 
-<!-- Thank You Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
-    <style>
-        body { text-align: center; font-family: Arial, sans-serif; margin: 50px; }
-    </style>
-</head>
-<body>
-    <h1>Thank You for Subscribing!</h1>
-    <p>Your subscription has been recorded.</p>
-    <a href="index.html" class="button">Return to Home</a>
-</body>
-</html>
-
-<!-- More Info Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Info - My Web Page</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-    </style>
-</head>
-<body>
-    <h1>More Information</h1>
-    <p>Welcome to the 'Read More' page! Here you can add detailed information about your project, instructions, or any additional content.</p>
-    <a href="index.html" class="button">Go Back</a>
 </body>
 </html>
