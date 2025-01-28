@@ -1,94 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup</title>
     
     <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WXRMT5TT');
-    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id=GTM-WXRMT5TT'+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXRMT5TT');</script>
     <!-- End Google Tag Manager -->
-
-    <title>Main Page - My Web Page 2025</title>
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-
-        h1, h2 {
-            color: #333;
-        }
-
-        a, button {
-            text-decoration: none;
-            color: white;
-            background-color: #007BFF;
-            padding: 10px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 14px;
-            border: none;
-            cursor: pointer;
-        }
-
-        a:hover, button:hover {
-            background-color: #0056b3;
-        }
-
-        a.plain-link {
-            color: #007BFF;
-            text-decoration: none;
-            background-color: transparent;
-            padding: 0;
-        }
-
-        a.plain-link:hover {
-            text-decoration: underline;
-        }
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: #007BFF; }
+        form { margin: 20px auto; width: 300px; }
+        input, button { width: 100%; padding: 10px; margin-top: 10px; }
+        #thank-you-message { display: none; color: green; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXRMT5TT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXRMT5TT" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <h2>FranceShopOumTest 2025: Main Page</h2>
-    <h1>Welcome to My Web Page</h1>
-    <p>
-        This is a website testing page to run a GA4 test tutorial. 
-        <a href="https://www.google.com" target="_blank" class="plain-link">Visit Google</a>
-    </p>
-
-    <!-- Newsletter Signup Form -->
-    <h3>Signup for our Newsletter</h3>
-    <form id="newsletter-form" action="/thank-you">
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
-            <small id="emailHelp">This form does not save your email. It is for demo purposes.</small>
-        </div>
-        <button type="submit" class="btn btn-primary">Subscribe</button>
+    <h1>Signup for Our Newsletter</h1>
+    
+    <form id="newsletter-form" action="thank-you.html">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
     </form>
 
-    <!-- Read More Button -->
-    <a href="more.html" class="button">Read More</a>
-
+    <script>
+        document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+            dataLayer.push({ 
+                'event': 'newsletter_signup',
+                'form_id': 'newsletter-form'
+            });
+        });
+    </script>
 </body>
 </html>
