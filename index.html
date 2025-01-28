@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
             var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
             j.async = true;
             j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
@@ -71,6 +73,18 @@
         <a href="https://www.google.com" target="_blank" class="plain-link">Visit Google</a>
     </p>
 
+    <!-- Newsletter Signup Form -->
+    <h3>Signup for our Newsletter</h3>
+    <form id="newsletter-form" action="/thank-you">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+            <small id="emailHelp">This form does not save your email. It is for demo purposes.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+
+    <!-- Read More Button -->
     <a href="more.html" class="button">Read More</a>
 
 </body>
